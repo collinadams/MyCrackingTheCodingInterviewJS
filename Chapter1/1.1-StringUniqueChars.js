@@ -1,4 +1,21 @@
+//O(n^2)
 function hasUniqueChars(str) {
-	//can't have unique characters if string length is greater than the # of possible characters
-  
+  for(var i = 0; i < str.length; i++){
+    if(str.indexOf(str[i]) !== str.lastIndexOf(str[i])){
+      return false;
+    }
+  }
+  return true;
+}
+
+//O(n)
+function hasUniqueCharsOptimized(str){
+  var freqObj = {};
+  for(var i = 0; i < str.length; i++){
+    if(freqObj.hasOwnProperty(str[i])){
+      return false;
+    }
+    freqObj[str[i]] = true;
+  }
+  return true;
 }
