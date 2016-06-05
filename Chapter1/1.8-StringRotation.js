@@ -5,9 +5,9 @@ using only onecalltoisSubstring (e.g., "waterbottLe" is a rotation of "erbottLew
 */
 
 function isRotation(str1, str2) { //determines whether str2 is a rotation of str1
-	if (str1.length !== str2.length || !str1.length)
-		return false; //strings must be of equal length and str1 should not be empty
-	var str1Twice = str1 + str1;
-	return isSubstring(str1twice, str2);
+  //strings must be of equal length and str1 should not be empty
+
+
+  
 }
 
