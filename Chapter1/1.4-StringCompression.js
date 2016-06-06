@@ -6,5 +6,16 @@ string, your method should return the original string.
 */
 
 function stringCompression(str) {
+  var compressed = '';
 
+  for(var i = 0; i < str.length; i++){
+    var current = str[i];
+    var count = 1;
+    while(current === str[i + 1]){
+      i++;
+      count++;
+    }
+    compressed += current + parseInt(count);
+  }
+  return compressed.length >= str.length ? str : compressed;
 }
