@@ -5,8 +5,20 @@ Problem: Implement an algorithm to find the kth to last element of a singly link
 //input is the head of the LinkedList (as a node) and an integer k (the kth element from the end will be returned; k=1 returns the last element)
 function kthLastElement(head, k) { 
   //empty linked list or invalid input for k
-
-
+  if(!head || k <= 0){
+    return null;
+  }
+  var delayed = head;
+  var immediate = head;
+  var i = 0;
+  while(immediate){
+    if(i > k){
+      delayed = delayed.next;
+    }
+    i++;
+    immediate = immidiate.next;
+  }
+  return delayed;
 }
 
 
